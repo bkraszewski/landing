@@ -1,0 +1,40 @@
+[debug] [2024-08-06T18:42:09.196Z] ----------------------------------------------------------------------
+[debug] [2024-08-06T18:42:09.198Z] Command:       /opt/homebrew/Cellar/node/22.1.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2024-08-06T18:42:09.199Z] CLI Version:   13.15.0
+[debug] [2024-08-06T18:42:09.199Z] Platform:      darwin
+[debug] [2024-08-06T18:42:09.199Z] Node Version:  v22.1.0
+[debug] [2024-08-06T18:42:09.199Z] Time:          Tue Aug 06 2024 20:42:09 GMT+0200 (Central European Summer Time)
+[debug] [2024-08-06T18:42:09.199Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-06T18:42:09.234Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-06T18:42:09.234Z] > authorizing via signed-in user (biuro.bdkinvest@gmail.com)
+[debug] [2024-08-06T18:42:09.234Z] [iam] checking project bdk-landing for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-06T18:42:09.235Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bdk-landing:testIamPermissions [none]
+[debug] [2024-08-06T18:42:09.235Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bdk-landing:testIamPermissions x-goog-quota-user=projects/bdk-landing
+[debug] [2024-08-06T18:42:09.235Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bdk-landing:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-06T18:42:10.114Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bdk-landing:testIamPermissions 200
+[debug] [2024-08-06T18:42:10.114Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bdk-landing:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-06T18:42:10.115Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bdk-landing [none]
+[debug] [2024-08-06T18:42:10.459Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bdk-landing 200
+[debug] [2024-08-06T18:42:10.460Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bdk-landing {"projectId":"bdk-landing","projectNumber":"500477184125","displayName":"bdk-landing","name":"projects/bdk-landing","resources":{"hostingSite":"bdk-landing"},"state":"ACTIVE","etag":"1_04c7e54f-884d-4e43-bca9-1bd5bbb2bdc1"}
+[info] 
+[info] === Deploying to 'bdk-landing'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-08-06T18:42:10.465Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bdk-landing/versions [none]
+[debug] [2024-08-06T18:42:10.465Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bdk-landing/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-08-06T18:42:11.637Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bdk-landing/versions 200
+[debug] [2024-08-06T18:42:11.637Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bdk-landing/versions {"name":"projects/500477184125/sites/bdk-landing/versions/9abed15e69ea48bf","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[bdk-landing]: beginning deploy... 
+[info] i  hosting[bdk-landing]: found 9 files in public 
+[debug] [2024-08-06T18:42:11.647Z] [hosting] uploading with 200 concurrency
+[debug] [2024-08-06T18:42:11.651Z] [hosting] hash cache [cHVibGlj] stored for 9 files
+[debug] [2024-08-06T18:42:11.651Z] [hosting][hash queue][FINAL] {"max":2,"min":0,"avg":0.2222222222222222,"active":0,"complete":9,"success":9,"errored":0,"retried":0,"total":9,"elapsed":3}
+[debug] [2024-08-06T18:42:11.651Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/500477184125/sites/bdk-landing/versions/9abed15e69ea48bf:populateFiles [none]
+[debug] [2024-08-06T18:42:11.651Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/500477184125/sites/bdk-landing/versions/9abed15e69ea48bf:populateFiles {"files":{"/styles.css":"8adc097e49cabdac838dde9822da062b1fe84214509c5022b0b142bece80048e","/404.html":"05cbc6f94d7a69ce2e29646eab13be2c884e61ba93e3094df5028866876d18b3","/images/publicis_logo.png":"8e0adf8d048ad761cc350d3f6ea5f3aa9e2ed2db490d0b381463fbab8fd6197e","/images/planflow_logo.webp":"8fe683db8dccdb93f0ff29db0ae5160bc6e00d078d81570e368b5ef8f4cd618d","/images/me.jpeg":"7622b8935a0f0ea0843462e5523c79a82083df2f8a01b91f9f9c6b10646c0ef0","/images/klar_logo.png":"35c4f09633db33f757cf36af9dec19749316fb2906287f0cc83442a94fe47578","/images/dropsource_logo.jpeg":"69dd609bdf8d00d79d589bc8e528668f8da78bc0ddaf3df88a830375e8bc7eda","/files/cv_bartosz_kraszewski.pdf":"ccbbf50c5b7611f9bfb232da135d80c9cf08d02329b05ba484434d4b0054af53","/index.html":"887dcf29722cf84f18ac257967d5b0b68345f53b84df1136ae8b09f4bd0b2425"}}
+[debug] [2024-08-06T18:42:11.895Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/500477184125/sites/bdk-landing/versions/9abed15e69ea48bf:populateFiles 200
+[debug] [2024-08-06T18:42:11.895Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/500477184125/sites/bdk-landing/versions/9abed15e69ea48bf:populateFiles {"uploadRequiredHashes":["887dcf29722cf84f18ac257967d5b0b68345f53b84df1136ae8b09f4bd0b2425"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/bdk-landing/versions/9abed15e69ea48bf/files"}
+[debug] [2024-08-06T18:42:11.896Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/bdk-landing/versions/9abed15e69ea48bf/files/887dcf29722cf84f18ac257967d5b0b68345f53b84df1136ae8b09f4bd0b2425 [none]
+[debug] [2024-08-06T18:42:11.896Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bdk-landing/versions/9abed15e69ea48bf/files/887dcf29722cf84f18ac257967d5b0b68345f53b84df1136ae8b09f4bd0b2425 [stream]
+[debug] [2024-08-06T18:42:11.898Z] [hosting][populate queue][FINAL] {"max":245,"min":245,"avg":245,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":247}
+[debug] [2024-08-06T18:42:11.898Z] [hosting] uploads queued: 1
