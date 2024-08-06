@@ -202,3 +202,13 @@ footer p {
         margin: 10px 0;
     }
 }
+
+a {
+    text-decoration: none;
+    color: #007BFF; /* Blue color */
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0056b3; /* Darker blue on hover */
+}
