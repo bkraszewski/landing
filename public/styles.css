@@ -1,9 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
+    /* Light gray background */
     color: #333;
-    background-color: #f4f4f4;
+    /* Dark text color */
 }
 
 .container {
@@ -11,6 +13,8 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+
 
 header {
     background-color: #f8f8f8;
@@ -29,7 +33,7 @@ header .logo {
 }
 
 header .color {
-    color: #007BFF;
+    color: #004080;
 }
 
 header nav ul {
@@ -44,10 +48,10 @@ header nav ul li {
     margin-left: 20px;
 }
 
-header nav ul li a {
+/* header nav ul li a {
     text-decoration: none;
     color: #333;
-}
+} */
 
 .hero {
     text-align: center;
@@ -74,7 +78,7 @@ header nav ul li a {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #004080;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -95,8 +99,7 @@ section {
 section h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #007BFF;
-    border-bottom: 2px solid #007BFF;
+    color: #004080;
     display: inline-block;
     padding-bottom: 10px;
 }
@@ -136,7 +139,7 @@ section iframe {
 }
 
 #contact button {
-    background-color: #007BFF;
+    background-color: #004080;
     color: white;
     border: none;
     cursor: pointer;
@@ -164,10 +167,10 @@ footer nav ul li {
     margin-left: 20px;
 }
 
-footer nav ul li a {
+/* footer nav ul li a {
     text-decoration: none;
     color: #333;
-}
+} */
 
 footer p {
     margin: 0;
@@ -211,14 +214,13 @@ footer p {
     }
 }
 
-a {
-    text-decoration: none;
-    color: #007BFF;
-    /* Blue color */
-}
 
-a:hover {
+a {
+    color: #004080; /* Material blue */
     text-decoration: none;
-    color: #0056b3;
-    /* Darker blue on hover */
-}
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: #005cb8; /* Darker blue on hover */
+  }
